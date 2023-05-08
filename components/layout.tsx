@@ -4,7 +4,7 @@ import styles from 'components/layout.module.css';
 import utilStyles from 'styles/utils.module.css';
 import Link from 'next/link';
 export const siteTitle = 'Next.js Sample Website';
-export const name = 'Vitor A.';
+export const name = 'Vitor Afonso';
 
 const layout = ({ children, home }) => {
   return (
