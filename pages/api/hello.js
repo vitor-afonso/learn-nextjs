@@ -9,8 +9,8 @@
 
 export default function handler(req, res) {
   if (req.method === 'POST') {
-    res.status(200).json({ text: 'Hello POST' });
+    res.status(200).json({ text: 'This is a POST' });
   } else {
-    res.status(200).json({ text: 'Hello GET' });
+    res.status(200).json({ text: 'This is a GET' });
   }
 }
