@@ -4,20 +4,22 @@ import utilStyles from 'styles/utils.module.css';
 import { getSortedPostsData } from '../lib/posts';
 import Link from 'next/link';
 import Date from 'components/date';
+import { GetStaticProps } from 'next';
 
 // STATIC GENERATION WITH DATA
 // This page will only be generated once, at runtimme, in the server and will be reused at every request
 // here we dont have access to query parameters or HTTP headers
 // it would not be possible to send the token to verify authentication for example
 // getStaticProps fetches the data that the page need to be rendered.
-export async function getStaticProps() {
+
+export const getStaticProps: GetStaticProps = async () => {
   const allPostsData = getSortedPostsData();
   return {
     props: {
       allPostsData,
     },
   };
-}
+};
 
 export default function Home({ allPostsData }) {
   return (

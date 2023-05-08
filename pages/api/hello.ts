@@ -1,3 +1,5 @@
+import { NextApiRequest, NextApiResponse } from 'next';
+
 // Next.js has support for API Routes, which let you easily create an API endpoint as a Node.js serverless function.
 
 // This endpoint would be: http://localhost:3000/api/hello
@@ -7,7 +9,7 @@
 
 // To handle different HTTP methods in an API route, you can use req.method in your request handler, like so:
 
-export default function handler(req, res) {
+export default function handler(req: NextApiRequest, res: NextApiResponse) {
   if (req.method === 'POST') {
     res.status(200).json({ text: 'This is a POST' });
   } else {
